@@ -1,17 +1,21 @@
-'''Guess The Number Game:
-    - we will generate a random number with the help of randint() function from 1 to 100
-    and ask the user to guess it.
-    - After every guess, the user will be told if the number is above or below the
-    randomly generated number.
-    - The user will win if they guess the number maximum five attempts.
-    - Ask the user to stop or continue playing again.'''
-
 import random
+def choose_level():
+    while True:
+        levels = input(' enter to level: ')
+
+        if levels == 'easy':
+            return 9
+        elif levels == 'medium':
+            return  6
+        elif levels == 'hard':
+            return 4
+
 def guess_number_game():
     is_win = False
     num = random.randint(1, 100)
+    level = choose_level()
 
-    for i in range(5):
+    for i in range(level):
         guess = int(input('guess a number 1 to 100: '))
         if num == guess:
             print(f'You guessed right! The number {num} is correct.')
@@ -22,7 +26,7 @@ def guess_number_game():
                 print(f'The number {guess} is too high.')
             else:
                 print(f'The number {guess} is too low.')
-        if num != guess and i == 4:
+        if num != guess and i == level - 1:
             print(f'correct: {num}')
     return is_win
 if __name__ == '__main__':
@@ -41,4 +45,3 @@ if __name__ == '__main__':
 
     print(f'So lan choi: {count_play}')
     print(f'So lan win: {count_win}')
-
