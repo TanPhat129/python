@@ -1,8 +1,5 @@
 import random
 
-from IPython.terminal.shortcuts.auto_suggest import down_and_update_hint
-
-
 def menu():
     print('------------------------------MENU--------------------------')
     print('1. In ra danh sách vừa tạo.')
@@ -33,11 +30,9 @@ def in_ds_dao_nguoc(lst):
     print(f'ds ban dau: {lst}')
     print(f'ds dao nguoc: {lst[::-1]}')
 
-
 def in_danh_sach_sx(lst):
     print(f'ds ban dau: {lst}')
     print(f'ds sau da dc sx: {sorted(lst)}')
-
 
 def tim_max_trong_mang(lst):
     print(f'ds ban dau: {lst}')
@@ -49,7 +44,6 @@ def tim_max_trong_mang(lst):
             count = i
     print(f'ptu lon nhat trong mang: {maximum} va nam o vi tri: {count}')
 
-
 def so_sanh(lst):
     num = int(input('nhap gia tri X muon dem: '))
     count_list = list()
@@ -60,7 +54,6 @@ def so_sanh(lst):
             count_list.append(i)
     print(lst)
     print(f'so ptu co gia tri bang {num} la {count} nam o cac vi tri: {count_list}')
-
 
 def ds_so_nguyen_to(lst):
     lst_songuyento = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29,
@@ -75,8 +68,7 @@ def ds_so_nguyen_to(lst):
             count_list.append(i)
     print(lst)
     print(f'vi tri cac so nguyen to: {count_list}')
-
-
+    
 def so_duy_nhat(lst):
     list_num = list()
     for item in lst:
@@ -84,7 +76,6 @@ def so_duy_nhat(lst):
             list_num.append(item)
     print(lst)
     print(f'cac so duy nhat trong ds la{list_num}')
-
 
 def liet_ke(lst):
     print(lst)
@@ -94,7 +85,6 @@ def liet_ke(lst):
             if lst[i] == lst[j]:
                 count+=1
         print(f'{lst[i]}: {count}')
-
 
 def doan_con(lst):
     print(lst)
